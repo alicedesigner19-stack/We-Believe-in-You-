@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.L.S. | We Believe In You</title>
+    <!-- Importação da Fonte Poppins -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #edf4fa; /* Fundo suave e calmo */
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        /* Barra de Navegação */
+        nav {
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            box-shadow: 0 4px 15px rgba(143, 182, 216, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #8FB6D8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, .active-tab {
+            color: #8FB6D8;
+        }
+
+        /* Aba Especial SS26 */
+        .ss26-tab {
+            background-color: #CFE3F1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Topo da página - Espaço para a Imagem da Logo */
+        .hero-logo {
+            background-color: #FFFFFF;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #CFE3F1;
+        }
+
+        .hero-logo img {
+            max-width: 100%;
+            height: auto;
+            max-height: 250px; /* Ajuste a altura máxima conforme necessário */
+            object-fit: contain;
+        }
+
+        /* Seção Manifesto: Calma vs Tumulto */
+        .manifesto {
+            padding: 80px 10%;
+            text-align: center;
+            background: linear-gradient(135deg, #FFFFFF 0%, #CFE3F1 100%);
+            margin-bottom: 40px;
+        }
+
+        .manifesto h1 {
+            font-size: 38px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .manifesto p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+            color: #546e7a;
+        }
+
+        .highlight-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-left: 5px solid #8FB6D8;
+            display: inline-block;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .highlight-box strong {
+            color: #8FB6D8;
+            font-size: 20px;
+        }
+
+        /* Grade de Conteúdo / História */
+        .grid-section {
+            padding: 60px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .block {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(143, 182, 216, 0.1);
+            border: 1px solid rgba(207, 227, 241, 0.5);
+        }
+
+        .block h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #CFE3F1;
+            padding-bottom: 10px;
+        }
+
+        .block ul {
+            list-style-type: square;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .block li {
+            margin-bottom: 8px;
+        }
+
+        /* Seção de Contato */
+        .contato-section {
+            background-color: #CFE3F1;
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .contato-section h2 {
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .social-card {
+            background: #FFFFFF;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            color: #8FB6D8;
+        }
+
+        /* Rodapé e Nota de Esclarecimento */
+        footer {
+            background-color: #2c3e50;
+            color: #FFFFFF;
+            padding: 40px 10%;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .esclarecimento {
+            background-color: rgba(237, 244, 250, 0.1);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            border: 1px dashed #8FB6D8;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .grid-section {
+                padding: 30px 5%;
+            }
+            .manifesto {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <div class="logo-text">A.L.S.</div>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#" class="ss26-tab">Coleções SS26</a></li>
+            <li><a href="#">Editorial</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Topo com a Foto da Logo -->
+    <header class="hero-logo">
+        <!-- SUBSTITUA O ATRIBUTO SRC ABAIXO PELO CAMINHO DA SUA FOTO -->
+        <img src="SUA-FOTO-DA-LOGO-AQUI.jpg" alt="Logo Oficial A.L.S. - We Believe In You">
+    </header>
+
+    <!-- Conceito e Manifesto Principal -->
+    <main>
+        <section class="manifesto">
+            <h1>A.L.S.</h1>
+            <p>
+                Uma marca de vestuário que nasce do contraste e da poesia urbana. Traduzimos em fios e recortes a complexa mistura entre a <strong>calma profunda</strong> e o <strong>tumulto do dia a dia</strong>. Entendemos que vestir vai muito além da moda espontânea: é uma armadura de expressão.
+            </p>
+            <div class="highlight-box">
+                <strong>Nós Acreditamos em você e no seu poder.</strong>
+            </div>
+        </section>
+
+        <!-- Seções de Histórias e Detalhes da Marca -->
+        <section class="grid-section">
+            
+            <!-- Bloco 1: A Estreia -->
+            <div class="block">
+                <h2>A Estreia nas Passarelas</h2>
+                <p>
+                    A primeira peça oficial da <strong>A.L.S.</strong> ganhou vida e foi exibida no prestigiado desfile da <strong>OFDM Curitiba</strong>, na capital paranaense. O design foi assinado de forma independente pela mente criativa da estilista <strong>Alice Lima de Souza</strong>, contando com o importante apoio e patrocínio de <strong>Camila Marcondes</strong>.
+                </p>
+            </div>
+
+            <!-- Bloco 2: DNA e Matéria-Prima -->
+            <div class="block">
+                <h2>DNA Texturizado</h2>
+                <p>
+                    Comprometida com a experiência do toque e com a estrutura das peças, a primeira confecção da marca utilizou materiais nobres e naturais:
+                </p>
+                <ul>
+                    <li>Algodão puro</li>
+                    <li>Linho rústico</li>
+                    <li>Cetim fluido</li>
+                    <li><strong>0% Poliéster</strong> (Sustentabilidade e conforto térmico)</li>
+                </ul>
+            </div>
+
+            <!-- Bloco 3: Primeiro Editorial -->
+            <div class="block">
+                <h2>Editorial: Urbanismo & Moda</h2>
+                <p>
+                    O primeiro editorial conceitual da marca é uma carta de amor às vivências da designer no <strong>Terminal Rodoviário do Maracanã</strong>, em Colombo. Inspirado na rotina de pegar ônibus ao lado de sua mãe, o ensaio trouxe como tema central o contraste entre a arquitetura do urbanismo bruto e a sensibilidade da moda.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Seção de Contatos Informativa -->
+        <section class="contato-section">
+            <h2>Conecte-se com a Designer</h2>
+            <p>Entre em contato para parcerias, encomendas ou informações sobre coleções:</p>
+            
+            <div class="social-links">
+                <a href="https://wa.me" target="_blank" class="social-card">
+                    📞 WhatsApp: +55 41 99862-1118
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-card">
+                    📸 Instagram: @a.l.s_we.believe.in.you
+                </a>
+                <a href="#" target="_blank" class="social-card">
+                    ▶️ YouTube: A.L.S. We Believe in You
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com Esclarecimento Obrigatório -->
+    <footer>
+        <div class="esclarecimento">
