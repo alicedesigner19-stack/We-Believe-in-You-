@@ -67,7 +67,75 @@
             font-weight: 600;
         }
 
-        /* Topo da página - Espaço para a Imagem da Logo */
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS - We Believe in You</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Container principal com a imagem de fundo */
+        .hero-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* Substitua 'link-da-sua-imagem.jpg' pelo caminho real da sua foto */
+            background: url('link-da-sua-imagem.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Área central do logotipo e texto */
+        .brand-box {
+            text-align: center;
+            color: #111111; /* Tom escuro quase preto do logo */
+        }
+
+        /* Estilização do Logotipo Textual Principal */
+        .logo-text {
+            font-size: 110px;
+            font-weight: bold;
+            letter-spacing: -5px;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        /* Slogan abaixo do logo */
+        .slogan {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-container">
+        <div class="brand-box">
+            <!-- Como o logo possui um design customizado interligado, 
+                 o ideal para produção é usar uma tag <img> ou SVG aqui. 
+                 Abaixo está a estrutura em texto para referência rápida: -->
+            <div class="logo-text">ATS</div>
+            <div class="slogan">We Believe in You</div>
+        </div>
+    </div>
+
+</body>
+</html>
+/
         .hero-logo {
             background-color: #FFFFFF;
             width: 100%;
