@@ -1,387 +1,1119 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.L.S. | We Believe In You</title>
-    <!-- Importação da Fonte Poppins -->
-    <link href="https://googleapis.com" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #edf4fa; /* Fundo suave e calmo */
-            color: #2c3e50;
-            line-height: 1.6;
-        }
+  <title>A.L.S. — We Believe in You</title>
 
-        /* Barra de Navegação */
-        nav {
-            background-color: #FFFFFF;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            box-shadow: 0 4px 15px rgba(143, 182, 216, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .logo-text {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            color: #8FB6D8;
-        }
+  <style>
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-            align-items: center;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            font-size: 15px;
-            transition: color 0.3s ease;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        nav a:hover, .active-tab {
-            color: #8FB6D8;
-        }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #edf4fa;
+      color: #111111;
+      line-height: 1.7;
+    }
 
-        /* Aba Especial SS26 */
-        .ss26-tab {
-            background-color: #CFE3F1;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
+    :root {
+      --azul-claro: #d0e9fc;
+      --azul: #8fb6d8;
+      --azul-profundo: #466d8f;
+      --branco: #ffffff;
+      --preto: #050505;
+      --cinza: #555555;
+    }
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATS - We Believe in You</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* =========================
+       MENU
+    ========================== */
 
-        body, html {
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(237, 244, 250, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+    }
 
-        /* Container principal com a imagem de fundo */
-        .hero-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            /* Substitua 'link-da-sua-imagem.jpg' pelo caminho real da sua foto */
-            background: url('link-da-sua-imagem.jpg') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    nav {
+      max-width: 1250px;
+      margin: auto;
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        /* Área central do logotipo e texto */
-        .brand-box {
-            text-align: center;
-            color: #111111; /* Tom escuro quase preto do logo */
-        }
+    .logo {
+      font-size: 34px;
+      font-weight: 500;
+      letter-spacing: -5px;
+      text-decoration: none;
+      color: #000;
+    }
 
-        /* Estilização do Logotipo Textual Principal */
-        .logo-text {
-            font-size: 110px;
-            font-weight: bold;
-            letter-spacing: -5px;
-            line-height: 1;
-            text-transform: uppercase;
-        }
+    .logo span {
+      font-size: 12px;
+      letter-spacing: 2px;
+      display: block;
+      margin-top: -8px;
+    }
 
-        /* Slogan abaixo do logo */
-        .slogan {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 10px;
-            letter-spacing: 0.5px;
-        }
-    </style>
+    nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 13px;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--azul-profundo);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-text {
+      padding: 80px;
+    }
+
+    .small-title {
+      font-size: 12px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(75px, 12vw, 170px);
+      font-weight: 500;
+      letter-spacing: -12px;
+      line-height: 0.75;
+    }
+
+    .hero h2 {
+      font-size: 19px;
+      font-weight: 400;
+      margin-top: 35px;
+      letter-spacing: 3px;
+    }
+
+    .hero p {
+      max-width: 470px;
+      margin-top: 20px;
+      color: var(--cinza);
+    }
+
+    .hero-image {
+      height: 88vh;
+      background:
+        linear-gradient(rgba(208,233,252,.08), rgba(208,233,252,.08)),
+        url("1000125970.png") center/cover;
+    }
+
+    /* =========================
+       SEÇÕES
+    ========================== */
+
+    section {
+      padding: 110px 8%;
+    }
+
+    .section-title {
+      font-size: clamp(42px, 6vw, 80px);
+      font-weight: 400;
+      letter-spacing: -4px;
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+
+    .section-subtitle {
+      max-width: 700px;
+      color: #555;
+      margin-bottom: 55px;
+    }
+
+    .linha {
+      height: 1px;
+      background: #000;
+      opacity: .25;
+      margin: 30px 0;
+    }
+
+    /* =========================
+       MANIFESTO
+    ========================== */
+
+    .manifesto {
+      background: var(--azul-claro);
+      text-align: center;
+    }
+
+    .manifesto h2 {
+      font-size: clamp(35px, 5vw, 70px);
+      font-weight: 400;
+      letter-spacing: -3px;
+    }
+
+    .manifesto p {
+      max-width: 850px;
+      margin: 30px auto;
+      font-size: 18px;
+    }
+
+    /* =========================
+       SOBRE A FUNDADORA
+    ========================== */
+
+    .fundadora {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .fundadora-box {
+      background: #000;
+      color: white;
+      min-height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .fundadora-box h3 {
+      font-size: 90px;
+      font-weight: 400;
+      letter-spacing: -8px;
+    }
+
+    .fundadora-text h3 {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .fundadora-text p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .assinatura {
+      margin-top: 35px;
+      font-size: 15px;
+      letter-spacing: 2px;
+    }
+
+    /* =========================
+       SS2026
+    ========================== */
+
+    .colecao {
+      background: white;
+    }
+
+    .colecao-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 60px;
+    }
+
+    .colecao-card {
+      min-height: 430px;
+      padding: 35px;
+      background: var(--azul-claro);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: .4s;
+    }
+
+    .colecao-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .colecao-card:nth-child(2) {
+      background: #8fb6d8;
+    }
+
+    .colecao-card:nth-child(3) {
+      background: #050505;
+      color: white;
+    }
+
+    .numero {
+      font-size: 13px;
+      letter-spacing: 4px;
+      margin-bottom: auto;
+    }
+
+    .colecao-card h3 {
+      font-size: 35px;
+      font-weight: 400;
+      letter-spacing: -2px;
+    }
+
+    .colecao-card p {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FASHION FILM
+    ========================== */
+
+    .fashion-film {
+      background: #050505;
+      color: white;
+    }
+
+    .fashion-film .section-subtitle {
+      color: #ccc;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 50px auto 30px;
+      background: #111;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .film-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      border-top: 1px solid #444;
+      padding-top: 25px;
+    }
+
+    .film-info h3 {
+      font-weight: 400;
+      font-size: 25px;
+    }
+
+    .instagram-button {
+      border: 1px solid white;
+      color: white;
+      padding: 13px 25px;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1px;
+      transition: .3s;
+    }
+
+    .instagram-button:hover {
+      background: white;
+      color: black;
+    }
+
+    /* =========================
+       DESFILE
+    ========================== */
+
+    .desfile {
+      background: var(--azul-claro);
+    }
+
+    .desfile-content {
+      max-width: 950px;
+    }
+
+    .desfile-content p {
+      margin: 25px 0;
+      font-size: 17px;
+    }
+
+    .destaque {
+      font-size: 27px;
+      margin: 40px 0;
+      padding-left: 30px;
+      border-left: 3px solid #000;
+    }
+
+    /* =========================
+       PRIMEIRA EXPOSIÇÃO
+    ========================== */
+
+    .exposicao {
+      background: white;
+    }
+
+    .evento {
+      border-top: 1px solid #111;
+      border-bottom: 1px solid #111;
+      padding: 35px 0;
+      margin-top: 40px;
+    }
+
+    .evento h3 {
+      font-size: 32px;
+      font-weight: 400;
+    }
+
+    .evento p {
+      margin-top: 10px;
+      color: #555;
+    }
+
+    /* =========================
+       REVISTA
+    ========================== */
+
+    .revista {
+      text-align: center;
+    }
+
+    .revista-box {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 90px 40px;
+      background: #d0e9fc;
+    }
+
+    .revista-box h3 {
+      font-size: 70px;
+      font-weight: 400;
+      letter-spacing: -6px;
+    }
+
+    .revista-box p {
+      margin-top: 20px;
+    }
+
+    /* =========================
+       IDENTIDADE
+    ========================== */
+
+    .identidade {
+      background: #edf4fa;
+    }
+
+    .identidade img {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto 0;
+      border: 1px solid rgba(0,0,0,.15);
+    }
+
+    /* =========================
+       CONTATO
+    ========================== */
+
+    .contato {
+      background: #000;
+      color: white;
+      text-align: center;
+    }
+
+    .contato .section-subtitle {
+      color: #bbb;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contato-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .contato-links a {
+      border: 1px solid white;
+      padding: 16px 28px;
+      color: white;
+      text-decoration: none;
+      transition: .3s;
+      font-size: 14px;
+    }
+
+    .contato-links a:hover {
+      background: white;
+      color: black;
+    }
+
+    /* =========================
+       AVISO
+    ========================== */
+
+    .aviso {
+      background: #d0e9fc;
+      padding: 40px 8%;
+      text-align: center;
+      font-size: 12px;
+      color: #444;
+    }
+
+    .aviso strong {
+      color: #000;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================== */
+
+    @media (max-width: 850px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        padding: 70px 30px;
+      }
+
+      .hero-image {
+        height: 65vh;
+      }
+
+      section {
+        padding: 80px 7%;
+      }
+
+      .fundadora {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .colecao-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .film-info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .revista-box h3 {
+        font-size: 50px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-    <div class="hero-container">
-        <div class="brand-box">
-            <!-- Como o logo possui um design customizado interligado, 
-                 o ideal para produção é usar uma tag <img> ou SVG aqui. 
-                 Abaixo está a estrutura em texto para referência rápida: -->
-            <div class="logo-text">ATS</div>
-            <div class="slogan">We Believe in You</div>
-        </div>
+  <!-- =========================
+       MENU
+  ========================== -->
+
+  <header>
+    <nav>
+
+      <a href="#" class="logo">
+        A.L.S.
+        <span>WE BELIEVE IN YOU</span>
+      </a>
+
+      <ul>
+        <li><a href="#marca">A MARCA</a></li>
+        <li><a href="#fundadora">FUNDADORA</a></li>
+        <li><a href="#ss2026">SS2026</a></li>
+        <li><a href="#film">FASHION FILM</a></li>
+        <li><a href="#contato">CONTATO</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <div class="small-title">
+        Clothing goes beyond fashion
+      </div>
+
+      <h1>A.L.S.</h1>
+
+      <h2>WE BELIEVE IN YOU</h2>
+
+      <p>
+        Vestir vai além de moda.
+        Acreditamos em você, na sua identidade,
+        na sua força e no poder de transformar
+        aquilo que veste em expressão.
+      </p>
+
     </div>
+
+    <div class="hero-image"></div>
+
+  </section>
+
+
+  <!-- =========================
+       MANIFESTO
+  ========================== -->
+
+  <section class="manifesto" id="marca">
+
+    <div class="small-title">
+      A.L.S. — Manifesto
+    </div>
+
+    <h2>Calma com agitação.</h2>
+
+    <p>
+      Luxo sem excesso. Intervenção com quebra
+      de padrões sociais. A A.L.S. nasce entre
+      o cotidiano e o imaginário, buscando transformar
+      o vestir em uma experiência de identidade,
+      movimento e expressão.
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       FUNDADORA
+  ========================== -->
+
+  <section id="fundadora">
+
+    <div class="fundadora">
+
+      <div class="fundadora-box">
+
+        <div>
+          <div class="small-title">
+            Designer & Founder
+          </div>
+
+          <h3>ALS</h3>
+        </div>
+
+      </div>
+
+      <div class="fundadora-text">
+
+        <div class="small-title">
+          A mente por trás da marca
+        </div>
+
+        <h2 class="section-title">
+          Alice Lima<br>
+          de Souza.
+        </h2>
+
+        <p>
+          Brasileira, nascida em Colombo, Paraná,
+          em 19 de fevereiro de 2011, Alice Lima de Souza
+          é modelo e designer e fundadora da A.L.S.
+        </p>
+
+        <p>
+          Aos 15 anos, em 2026, constrói sua visão de moda
+          a partir de experiências pessoais, referências
+          culturais, criatividade e uma relação muito
+          particular com o vestir.
+        </p>
+
+        <p>
+          Sua história com a criação começou ainda na infância,
+          quando produzia roupinhas para bonecas e transformava
+          lençóis em possibilidades diante do espelho.
+        </p>
+
+        <p>
+          Sua trajetória também é marcada por sua identidade
+          como pessoa transexual e por sua vivência cultural
+          ligada à Umbanda.
+        </p>
+
+        <div class="assinatura">
+          ALICE LIMA DE SOUZA — A.L.S.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SS2026
+  ========================== -->
+
+  <section class="colecao" id="ss2026">
+
+    <div class="small-title">
+      Temas & Coleções
+    </div>
+
+    <h2 class="section-title">
+      SS2026
+    </h2>
+
+    <p class="section-subtitle">
+      Uma temporada construída entre urbanismo,
+      memória, cultura, mitologia e experimentação.
+    </p>
+
+
+    <div class="colecao-grid">
+
+      <div class="colecao-card">
+
+        <div class="numero">01 — FILM</div>
+
+        <h3>Fashion Film</h3>
+
+        <p>
+          Urbanismo, transporte e memória
+          transformados em linguagem de moda.
+        </p>
+
+      </div>
+
+
+      <div class="colecao-card">
+
+        <div class="numero">02 — RUNWAY</div>
+
+        <h3>Grécia</h3>
+
+        <p>
+          Uma coleção inspirada na cultura
+          e na mitologia grega.
+        </p>
+
+      </div>
+
+
+      <div class="colecao-card">
+
+        <div class="numero">03 — MAGAZINE</div>
+
+        <h3>Revista A.L.S.</h3>
+
+        <p>
+          Um editorial de campo que ainda
+          será apresentado.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FASHION FILM
+  ========================== -->
+
+  <section class="fashion-film" id="film">
+
+    <div class="small-title">
+      A.L.S. Fashion Film SS2026
+    </div>
+
+    <h2 class="section-title">
+      O caminho<br>
+      também veste.
+    </h2>
+
+    <p class="section-subtitle">
+
+      Um editorial pensado no contexto de
+      urbanismo e moda, realizado no Terminal
+      do Maracanã, em Colombo.
+
+      <br><br>
+
+      O local possui um significado pessoal:
+      foi parte da rotina de Alice e de sua mãe
+      durante grande parte de suas vidas,
+      utilizando o transporte público para
+      deslocamentos ao trabalho, consultas
+      e outros compromissos.
+
+    </p>
+
+
+    <div class="video-container">
+
+      <!--
+        COLOQUE SEU VÍDEO NESTA PASTA
+        com o nome:
+
+        ALS-SS2026-Fashion-Film.mp4
+      -->
+
+      <video controls poster="1000125970.png">
+
+        <source
+          src="ALS-SS2026-Fashion-Film.mp4"
+          type="video/mp4">
+
+        Seu navegador não suporta vídeo HTML5.
+
+      </video>
+
+    </div>
+
+
+    <div class="film-info">
+
+      <div>
+
+        <h3>
+          A.L.S. Fashion Film SS2026
+        </h3>
+
+        <p>
+          Urbanismo × Moda × Memória
+        </p>
+
+      </div>
+
+
+      <a
+        class="instagram-button"
+        href="https://www.instagram.com/a.l.s._we.believe.in.you/"
+        target="_blank">
+
+        @A.L.S.WeBelieveinYou
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DESFILE SS2026
+  ========================== -->
+
+  <section class="desfile">
+
+    <div class="desfile-content">
+
+      <div class="small-title">
+        SS2026 — Runway
+      </div>
+
+      <h2 class="section-title">
+        Moda da Grécia<br>
+        em ação.
+      </h2>
+
+      <p>
+        Podem esperar uma coleção extremamente
+        conectada à cultura grega.
+      </p>
+
+      <p>
+        Vestidos e conjuntos produzidos
+        100% à mão, explorando tecidos fluidos,
+        estampas marcantes e detalhes desenvolvidos
+        especialmente para cada peça.
+      </p>
+
+      <div class="destaque">
+
+        A escolha da Grécia nasce de uma relação
+        profunda com a mitologia grega, que sempre
+        marcou o imaginário da designer.
+
+      </div>
+
+      <p>
+        Antes da marca, existiam bonecas,
+        espelhos, lençóis e uma imaginação
+        que transformava qualquer tecido
+        em uma nova possibilidade.
+      </p>
+
+      <p>
+        A SS2026 transforma essa memória infantil
+        em uma linguagem contemporânea de moda.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRIMEIRA EXPOSIÇÃO
+  ========================== -->
+
+  <section class="exposicao">
+
+    <div class="small-title">
+      Primeiro capítulo
+    </div>
+
+    <h2 class="section-title">
+      A primeira<br>
+      exposição.
+    </h2>
+
+    <p class="section-subtitle">
+
+      A A.L.S. teve sua primeira exposição em
+      desfile acompanhada de palestra, apresentando
+      a identidade da marca, sua visão de mercado
+      e diferentes reflexões sobre como a moda
+      pode se posicionar e agir no mercado.
+
+    </p>
+
+
+    <div class="evento">
+
+      <h3>
+        OFDM Curitiba
+      </h3>
+
+      <p>
+        Curitiba — Paraná
+      </p>
+
+      <p>
+        11 de agosto de 2026
+      </p>
+
+      <p>
+        Apresentação da marca + palestra +
+        desfile de uma única peça exclusiva.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       REVISTA
+  ========================== -->
+
+  <section class="revista">
+
+    <div class="small-title">
+      A.L.S. Magazine
+    </div>
+
+    <h2 class="section-title">
+      Revista A.L.S.
+    </h2>
+
+    <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">
+
+      Um projeto editorial de campo que
+      ainda será lançado.
+
+    </p>
+
+
+    <div class="revista-box">
+
+      <div class="small-title">
+        SS2026
+      </div>
+
+      <h3>
+        FIELD<br>
+        EDITORIAL
+      </h3>
+
+      <p>
+        Em breve.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       IDENTIDADE VISUAL
+  ========================== -->
+
+  <section class="identidade">
+
+    <div class="small-title">
+      Visual Identity
+    </div>
+
+    <h2 class="section-title">
+      We Believe<br>
+      in You.
+    </h2>
+
+    <p class="section-subtitle">
+
+      A identidade visual da A.L.S. trabalha
+      com a tranquilidade do azul, a força do preto,
+      a pureza do branco e referências visuais
+      ligadas à água e à luz.
+
+    </p>
+
+    <img
+      src="1000125970.png"
+      alt="Identidade visual da A.L.S.">
+
+  </section>
+
+
+  <!-- =========================
+       CONTATO
+  ========================== -->
+
+  <section class="contato" id="contato">
+
+    <div class="small-title">
+      Contact
+    </div>
+
+    <h2 class="section-title">
+      Let's believe<br>
+      in you.
+    </h2>
+
+    <p class="section-subtitle">
+
+      Para informações sobre a A.L.S.,
+      projetos, moda, editoriais e trabalhos:
+
+    </p>
+
+
+    <div class="contato-links">
+
+      <a
+        href="https://www.instagram.com/a.l.s._we.believe.in.you/"
+        target="_blank">
+
+        Instagram
+      </a>
+
+      <a
+        href="https://wa.me/5531998621118"
+        target="_blank">
+
+        WhatsApp — Dsg. Alice
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       AVISO
+  ========================== -->
+
+  <div class="aviso">
+
+    <strong>AVISO IMPORTANTE</strong>
+
+    <br><br>
+
+    A A.L.S. é uma marca de vestuário e não possui
+    qualquer ligação com a doença conhecida como
+    ALS/ELA (Esclerose Lateral Amiotrófica).
+
+    <br>
+
+    A denominação A.L.S. apresentada neste website
+    refere-se exclusivamente à marca de moda
+    <strong>A.L.S. — We Believe in You.</strong>
+
+  </div>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    A.L.S. — WE BELIEVE IN YOU
+
+    <br><br>
+
+    © 2026 A.L.S. Fashion.
+    Todos os direitos reservados.
+
+  </footer>
+
 
 </body>
 </html>
-/
-        .hero-logo {
-            background-color: #FFFFFF;
-            width: 100%;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 2px solid #CFE3F1;
-        }
-
-        .hero-logo img {
-            max-width: 100%;
-            height: auto;
-            max-height: 250px; /* Ajuste a altura máxima conforme necessário */
-            object-fit: contain;
-        }
-
-        /* Seção Manifesto: Calma vs Tumulto */
-        .manifesto {
-            padding: 80px 10%;
-            text-align: center;
-            background: linear-gradient(135deg, #FFFFFF 0%, #CFE3F1 100%);
-            margin-bottom: 40px;
-        }
-
-        .manifesto h1 {
-            font-size: 38px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .manifesto p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 300;
-            color: #546e7a;
-        }
-
-        .highlight-box {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #FFFFFF;
-            border-left: 5px solid #8FB6D8;
-            display: inline-block;
-            border-radius: 4px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-        }
-
-        .highlight-box strong {
-            color: #8FB6D8;
-            font-size: 20px;
-        }
-
-        /* Grade de Conteúdo / História */
-        .grid-section {
-            padding: 60px 10%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .block {
-            background-color: #FFFFFF;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(143, 182, 216, 0.1);
-            border: 1px solid rgba(207, 227, 241, 0.5);
-        }
-
-        .block h2 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #CFE3F1;
-            padding-bottom: 10px;
-        }
-
-        .block ul {
-            list-style-type: square;
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        .block li {
-            margin-bottom: 8px;
-        }
-
-        /* Seção de Contato */
-        .contato-section {
-            background-color: #CFE3F1;
-            padding: 60px 10%;
-            text-align: center;
-        }
-
-        .contato-section h2 {
-            margin-bottom: 25px;
-            color: #2c3e50;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .social-card {
-            background: #FFFFFF;
-            padding: 15px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .social-card:hover {
-            transform: translateY(-5px);
-            color: #8FB6D8;
-        }
-
-        /* Rodapé e Nota de Esclarecimento */
-        footer {
-            background-color: #2c3e50;
-            color: #FFFFFF;
-            padding: 40px 10%;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .esclarecimento {
-            background-color: rgba(237, 244, 250, 0.1);
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            font-weight: 300;
-            border: 1px dashed #8FB6D8;
-        }
-
-        /* Responsividade para Celulares */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-            nav ul {
-                flex-direction: column;
-                gap: 12px;
-            }
-            .grid-section {
-                padding: 30px 5%;
-            }
-            .manifesto {
-                padding: 60px 5%;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Menu de Navegação -->
-    <nav>
-        <div class="logo-text">A.L.S.</div>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#" class="ss26-tab">Coleções SS26</a></li>
-            <li><a href="#">Editorial</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
-
-    <!-- Topo com a Foto da Logo -->
-    <header class="hero-logo">
-        <!-- SUBSTITUA O ATRIBUTO SRC ABAIXO PELO CAMINHO DA SUA FOTO -->
-        <img src="SUA-FOTO-DA-LOGO-AQUI.jpg" alt="Logo Oficial A.L.S. - We Believe In You">
-    </header>
-
-    <!-- Conceito e Manifesto Principal -->
-    <main>
-        <section class="manifesto">
-            <h1>A.L.S.</h1>
-            <p>
-                Uma marca de vestuário que nasce do contraste e da poesia urbana. Traduzimos em fios e recortes a complexa mistura entre a <strong>calma profunda</strong> e o <strong>tumulto do dia a dia</strong>. Entendemos que vestir vai muito além da moda espontânea: é uma armadura de expressão.
-            </p>
-            <div class="highlight-box">
-                <strong>Nós Acreditamos em você e no seu poder.</strong>
-            </div>
-        </section>
-
-        <!-- Seções de Histórias e Detalhes da Marca -->
-        <section class="grid-section">
-            
-            <!-- Bloco 1: A Estreia -->
-            <div class="block">
-                <h2>A Estreia nas Passarelas</h2>
-                <p>
-                    A primeira peça oficial da <strong>A.L.S.</strong> ganhou vida e foi exibida no prestigiado desfile da <strong>OFDM Curitiba</strong>, na capital paranaense. O design foi assinado de forma independente pela mente criativa da estilista <strong>Alice Lima de Souza</strong>, contando com o importante apoio e patrocínio de <strong>Camila Marcondes</strong>.
-                </p>
-            </div>
-
-            <!-- Bloco 2: DNA e Matéria-Prima -->
-            <div class="block">
-                <h2>DNA Texturizado</h2>
-                <p>
-                    Comprometida com a experiência do toque e com a estrutura das peças, a primeira confecção da marca utilizou materiais nobres e naturais:
-                </p>
-                <ul>
-                    <li>Algodão puro</li>
-                    <li>Linho rústico</li>
-                    <li>Cetim fluido</li>
-                    <li><strong>0% Poliéster</strong> (Sustentabilidade e conforto térmico)</li>
-                </ul>
-            </div>
-
-            <!-- Bloco 3: Primeiro Editorial -->
-            <div class="block">
-                <h2>Editorial: Urbanismo & Moda</h2>
-                <p>
-                    O primeiro editorial conceitual da marca é uma carta de amor às vivências da designer no <strong>Terminal Rodoviário do Maracanã</strong>, em Colombo. Inspirado na rotina de pegar ônibus ao lado de sua mãe, o ensaio trouxe como tema central o contraste entre a arquitetura do urbanismo bruto e a sensibilidade da moda.
-                </p>
-            </div>
-
-        </section>
-
-        <!-- Seção de Contatos Informativa -->
-        <section class="contato-section">
-            <h2>Conecte-se com a Designer</h2>
-            <p>Entre em contato para parcerias, encomendas ou informações sobre coleções:</p>
-            
-            <div class="social-links">
-                <a href="https://wa.me" target="_blank" class="social-card">
-                    📞 WhatsApp: +55 41 99862-1118
-                </a>
-                <a href="https://instagram.com" target="_blank" class="social-card">
-                    📸 Instagram: @a.l.s_we.believe.in.you
-                </a>
-                <a href="#" target="_blank" class="social-card">
-                    ▶️ YouTube: A.L.S. We Believe in You
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Rodapé com Esclarecimento Obrigatório -->
-    <footer>
-        <div class="esclarecimento">
+```
