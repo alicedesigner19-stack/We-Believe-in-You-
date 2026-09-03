@@ -27,6 +27,12 @@
       scroll-behavior: smooth;
     }
 
+    #urbanismo,
+    #grecia,
+    #revista {
+      scroll-margin-top: 110px;
+    }
+
     body {
       font-family: "Poppins", sans-serif;
       background: #edf4fa;
@@ -43,6 +49,9 @@
       --cinza: #555555;
       --cinza-claro: #f7f7f7;
       --ouro: #c8a96b;
+      --verde-pastel: #dcefd8;
+      --amarelo-pastel: #fff0b8;
+      --verde-profundo: #57745a;
     }
 
 
@@ -74,6 +83,18 @@
       letter-spacing: -5px;
       text-decoration: none;
       color: #000;
+      animation: logoEntrada 1.1s cubic-bezier(.22,1,.36,1) both;
+    }
+
+    @keyframes logoEntrada {
+      from {
+        opacity: 0;
+        transform: translateX(-55px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     .logo span {
@@ -279,6 +300,12 @@
       transform: translateY(-8px);
     }
 
+    .colecao-link {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
     .colecao-card:nth-child(2) {
       background: #8fb6d8;
     }
@@ -376,14 +403,21 @@
     .film-card.featured {
       max-width: 1200px;
       border-top: 1px solid rgba(255,255,255,.35);
-      padding-top: 70px;
+      padding: 70px 45px 45px;
       position: relative;
+      background:
+        linear-gradient(135deg,
+          var(--verde-pastel) 0%,
+          #e9f4d6 48%,
+          var(--amarelo-pastel) 100%);
+      color: #172018;
+      box-shadow: 0 24px 60px rgba(0,0,0,.18);
     }
 
     .film-card.featured::before {
       content: "LANÇAMENTO — SETEMBRO 2026";
       display: inline-block;
-      color: var(--ouro);
+      color: var(--verde-profundo);
       font-size: 11px;
       letter-spacing: 4px;
       margin-bottom: 20px;
@@ -394,7 +428,34 @@
     }
 
     .film-card.featured .film-label {
-      color: var(--ouro);
+      color: var(--verde-profundo);
+    }
+
+    .film-card.featured .film-card-description {
+      color: #405043;
+    }
+
+    .film-card.featured .film-highlight {
+      border-left-color: #b69b3c;
+      color: #334236;
+    }
+
+    .film-card.featured .film-info {
+      border-top-color: rgba(23,32,24,.28);
+    }
+
+    .film-card.featured .film-info p {
+      color: #536257;
+    }
+
+    .film-card.featured .instagram-button {
+      border-color: #172018;
+      color: #172018;
+    }
+
+    .film-card.featured .instagram-button:hover {
+      background: #172018;
+      color: #fffdf3;
     }
 
     .film-highlight {
@@ -612,6 +673,7 @@
 
     .revista {
       text-align: center;
+      scroll-margin-top: 100px;
     }
 
     .revista-capa {
@@ -622,6 +684,12 @@
       border: 1px solid rgba(0,0,0,.12);
       box-shadow: 0 18px 45px rgba(0,0,0,.14);
       object-fit: contain;
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .revista-capa:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 55px rgba(0,0,0,.18);
     }
 
     .revista-box {
@@ -775,7 +843,7 @@
       }
 
       .film-card.featured {
-        padding-top: 50px;
+        padding: 50px 28px 35px;
       }
 
       .revista-box h3 {
@@ -828,6 +896,20 @@
         padding: 65px 24px;
       }
 
+      .film-card.featured {
+        padding: 42px 20px 30px;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .logo {
+        animation: none;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
     }
 
   </style>
@@ -854,6 +936,7 @@
         <li><a href="#fundadora">FUNDADORA</a></li>
         <li><a href="#ss2026">SS2026</a></li>
         <li><a href="#fashion-films">FASHION FILM</a></li>
+        <li><a href="#revista">REVISTA</a></li>
         <li><a href="#contato">CONTATO</a></li>
       </ul>
 
@@ -1011,7 +1094,7 @@
     <div class="colecao-grid">
 
 
-      <div class="colecao-card">
+      <a href="#urbanismo" class="colecao-card colecao-link">
 
         <div class="numero">
           01 — FASHION FILM
@@ -1027,10 +1110,10 @@
           da temporada.
         </p>
 
-      </div>
+      </a>
 
 
-      <div class="colecao-card">
+      <a href="#grecia" class="colecao-card colecao-link">
 
         <div class="numero">
           02 — GREEK CULTURE
@@ -1046,10 +1129,10 @@
           e na mitologia grega.
         </p>
 
-      </div>
+      </a>
 
 
-      <div class="colecao-card">
+      <a href="#revista" class="colecao-card colecao-link">
 
         <div class="numero">
           03 — MAGAZINE
@@ -1064,7 +1147,7 @@
           Grego Culture SS2026.
         </p>
 
-      </div>
+      </a>
 
     </div>
 
@@ -1103,7 +1186,7 @@
          FASHION FILM I
     ========================== -->
 
-    <div class="film-card">
+    <div class="film-card" id="urbanismo">
 
       <div class="film-label">
         Fashion Film I — SS2026
@@ -1256,7 +1339,7 @@
        GREGO CULTURE SS2026
   ========================== -->
 
-  <section class="grego-culture">
+  <section class="grego-culture" id="grecia">
 
     <div class="grego-content">
 
@@ -1431,18 +1514,24 @@
 
     </div>
 
-<!-- =========================
-       REVISTA OUT
-  ========================== -->
   </section>
 
-<img src="IMG-Out.jpg" alt="Capa da revista">
+  <!-- =========================
+       REVISTA OUT
+  ========================== -->
 
-  <section class="revista">
+  <section class="revista" id="revista">
 
     <div class="small-title">
       A.L.S. Magazine
     </div>
+
+    <img
+      src="IMG-Out.jpg"
+      class="revista-capa"
+      alt="Capa da Revista OUT — A.L.S."
+      loading="lazy"
+    >
 
     <h2 class="section-title">
       Revista A.L.S.
