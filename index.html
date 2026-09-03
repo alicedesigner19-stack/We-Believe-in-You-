@@ -13,6 +13,10 @@
 
   <style>
 
+    /* =========================
+       RESET
+    ========================== */
+
     * {
       margin: 0;
       padding: 0;
@@ -37,7 +41,10 @@
       --branco: #ffffff;
       --preto: #050505;
       --cinza: #555555;
+      --cinza-claro: #f7f7f7;
+      --ouro: #c8a96b;
     }
+
 
     /* =========================
        MENU
@@ -94,6 +101,7 @@
       color: var(--azul-profundo);
     }
 
+
     /* =========================
        HERO
     ========================== */
@@ -144,6 +152,7 @@
         url("1000125970.png") center/cover;
     }
 
+
     /* =========================
        SEÇÕES
     ========================== */
@@ -173,18 +182,13 @@
       margin: 30px 0;
     }
 
+
     /* =========================
        MANIFESTO
     ========================== */
 
     .manifesto {
-      background: var(--azul-claro);If this is your site, make sure that the filename case matches the URL as well as any file permissions.
-For root URLs (like http://example.com/) you must provide an index.html file.
-
-Read the full documentation for more information about using GitHub Pages.
-
-GitHub Status — @githubstatus
-￼
+      background: var(--azul-claro);
       text-align: center;
     }
 
@@ -200,8 +204,9 @@ GitHub Status — @githubstatus
       font-size: 18px;
     }
 
+
     /* =========================
-       SOBRE A FUNDADORA
+       FUNDADORA
     ========================== */
 
     .fundadora {
@@ -243,6 +248,7 @@ GitHub Status — @githubstatus
       font-size: 15px;
       letter-spacing: 2px;
     }
+
 
     /* =========================
        SS2026
@@ -299,46 +305,142 @@ GitHub Status — @githubstatus
       font-size: 14px;
     }
 
+
     /* =========================
-       FASHION FILM
+       FASHION FILMS
     ========================== */
 
-    .fashion-film {
+    .fashion-films {
       background: #050505;
       color: white;
+      text-align: center;
     }
 
-    .fashion-film .section-subtitle {
+    .fashion-films .section-subtitle {
       color: #ccc;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .films-intro {
+      max-width: 850px;
+      margin: 0 auto 70px;
+    }
+
+    .films-intro p {
+      color: #bbb;
+      font-size: 17px;
+    }
+
+    /* =========================
+       FILM CARD
+    ========================== */
+
+    .film-card {
+      max-width: 1150px;
+      margin: 0 auto 100px;
+      text-align: left;
+    }
+
+    .film-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .film-label {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 18px;
+    }
+
+    .film-card h3 {
+      font-size: clamp(35px, 5vw, 65px);
+      font-weight: 400;
+      letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .film-card-description {
+      max-width: 750px;
+      color: #bbb;
+      margin-bottom: 35px;
+    }
+
+    /* =========================
+       FILM II — DESTAQUE
+    ========================== */
+
+    .film-card.featured {
+      max-width: 1200px;
+      border-top: 1px solid rgba(255,255,255,.35);
+      padding-top: 70px;
+      position: relative;
+    }
+
+    .film-card.featured::before {
+      content: "LANÇAMENTO — SETEMBRO 2026";
+      display: inline-block;
+      color: var(--ouro);
+      font-size: 11px;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+
+    .film-card.featured h3 {
+      font-size: clamp(45px, 7vw, 90px);
+    }
+
+    .film-card.featured .film-label {
+      color: var(--ouro);
+    }
+
+    .film-highlight {
+      border-left: 2px solid var(--ouro);
+      padding-left: 25px;
+      margin: 30px 0 40px;
+      color: #ddd;
+      max-width: 850px;
+      font-size: 18px;
     }
 
     .video-container {
       width: 100%;
       max-width: 1100px;
-      margin: 50px auto 30px;
+      margin: 45px auto 30px;
       background: #111;
       aspect-ratio: 16 / 9;
       overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,.35);
     }
 
-    .video-container video {
+    .video-container iframe {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      border: 0;
+      display: block;
     }
 
     .film-info {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       gap: 30px;
       border-top: 1px solid #444;
       padding-top: 25px;
     }
 
-    .film-info h3 {
+    .film-info h4 {
       font-weight: 400;
-      font-size: 25px;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .film-info p {
+      color: #aaa;
+      font-size: 14px;
     }
 
     .instagram-button {
@@ -349,6 +451,7 @@ GitHub Status — @githubstatus
       font-size: 13px;
       letter-spacing: 1px;
       transition: .3s;
+      white-space: nowrap;
     }
 
     .instagram-button:hover {
@@ -356,165 +459,85 @@ GitHub Status — @githubstatus
       color: black;
     }
 
+
     /* =========================
-       DESFILE
+       GREGOS CULTURE
     ========================== */
 
-    .desfile {
+    .grego-culture {
       background: var(--azul-claro);
     }
 
-    .desfile-content {
-      max-width: 950px;
+    .grego-content {
+      max-width: 1050px;
+      margin: auto;
     }
 
-    .desfile-content p {
-      margin: 25px 0;
+    .grego-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .grego-header .small-title {
+      color: var(--azul-profundo);
+    }
+
+    .grego-header h2 {
+      font-size: clamp(50px, 8vw, 110px);
+      font-weight: 400;
+      letter-spacing: -7px;
+      line-height: .9;
+    }
+
+    .grego-header p {
+      max-width: 700px;
+      margin: 30px auto 0;
+      color: #444;
       font-size: 17px;
     }
 
+    .grego-text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-top: 60px;
+    }
+
+    .grego-text p {
+      color: #444;
+      font-size: 16px;
+    }
+
     .destaque {
-      font-size: 27px;
+      font-size: 25px;
       margin: 40px 0;
       padding-left: 30px;
       border-left: 3px solid #000;
     }
 
+
     /* =========================
-       PRIMEIRA EXPOSIÇÃO
+       DESFILE
     ========================== */
 
-    .exposicao {
+    .desfile {
       background: white;
     }
 
-    .evento {
-      border-top: 1px solid #111;
-      border-bottom: 1px solid #111;
-      padding: 35px 0;
-      margin-top: 40px;
+    .desfile-content {
+      max-width: 950px;
+      margin: auto;
     }
 
-    .evento h3 {
-      font-size: 32px;
-      font-weight: 400;
-    }
-
-    .evento p {
-      margin-top: 10px;
-      color: #555;
-    }
-
-    /* =========================
-       A.L.S. MAGAZINE
-    ========================== */
-
-    .revista {
-      text-align: center;
-    }
-
-    .revista-box {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 90px 40px;
-      background: #d0e9fc;
-    }
-
-    .revista-box h3 {
-      font-size: 70px;
-      font-weight: 400;
-      letter-spacing: -6px;
-    }
-
-    .revista-box p {
-      margin-top: 20px;
-    }
-
-    /* =========================
-       IDENTIDADE
-    ========================== */
-
-    .identidade {
-      background: #edf4fa;
-    }
-
-    .identidade img {
-      display: block;
-      width: 100%;
-      max-width: 1000px;
-      margin: 50px auto 0;
-      border: 1px solid rgba(0,0,0,.15);
-    }
-
-    /* =========================
-       CONTATO
-    ========================== */
-
-    .contato {
-      background: #000;
-      color: white;
-      text-align: center;
-    }
-
-    .contato .section-subtitle {
-      color: #bbb;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .contato-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-
-    .contato-links a {
-      border: 1px solid white;
-      padding: 16px 28px;
-      color: white;
-      text-decoration: none;
-      transition: .3s;
-      font-size: 14px;
-    }
-
-    .contato-links a:hover {
-      background: white;
-      color: black;
-    }
-
-    /* =========================
-       AVISO
-    ========================== */
-
-    .aviso {
-      background: #d0e9fc;
-      padding: 40px 8%;
-      text-align: center;
-      font-size: 12px;
+    .desfile-content p {
+      margin: 25px 0;
+      font-size: 17px;
       color: #444;
     }
 
-    .aviso strong {
-      color: #000;
-    }
 
     /* =========================
-       FOOTER
-    ========================== */
-
-    footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 30px;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
-    /* =========================
-       DEDICATÓRIA — FOTÓGRAFO
+       DEDICATÓRIA
     ========================== */
 
     .dedicatoria {
@@ -556,6 +579,147 @@ GitHub Status — @githubstatus
       line-height: 1.7;
     }
 
+
+    /* =========================
+       PRIMEIRA EXPOSIÇÃO
+    ========================== */
+
+    .exposicao {
+      background: white;
+    }
+
+    .evento {
+      border-top: 1px solid #111;
+      border-bottom: 1px solid #111;
+      padding: 35px 0;
+      margin-top: 40px;
+    }
+
+    .evento h3 {
+      font-size: 32px;
+      font-weight: 400;
+    }
+
+    .evento p {
+      margin-top: 10px;
+      color: #555;
+    }
+
+
+    /* =========================
+       REVISTA
+    ========================== */
+
+    .revista {
+      text-align: center;
+    }
+
+    .revista-box {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 90px 40px;
+      background: #d0e9fc;
+    }
+
+    .revista-box h3 {
+      font-size: 70px;
+      font-weight: 400;
+      letter-spacing: -6px;
+      line-height: 1;
+    }
+
+    .revista-box p {
+      margin-top: 20px;
+    }
+
+
+    /* =========================
+       IDENTIDADE
+    ========================== */
+
+    .identidade {
+      background: #edf4fa;
+    }
+
+    .identidade img {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto 0;
+      border: 1px solid rgba(0,0,0,.15);
+    }
+
+
+    /* =========================
+       CONTATO
+    ========================== */
+
+    .contato {
+      background: #000;
+      color: white;
+      text-align: center;
+    }
+
+    .contato .section-subtitle {
+      color: #bbb;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contato-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .contato-links a {
+      border: 1px solid white;
+      padding: 16px 28px;
+      color: white;
+      text-decoration: none;
+      transition: .3s;
+      font-size: 14px;
+    }
+
+    .contato-links a:hover {
+      background: white;
+      color: black;
+    }
+
+
+    /* =========================
+       AVISO
+    ========================== */
+
+    .aviso {
+      background: #d0e9fc;
+      padding: 40px 8%;
+      text-align: center;
+      font-size: 12px;
+      color: #444;
+    }
+
+    .aviso strong {
+      color: #000;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+
     /* =========================
        RESPONSIVO
     ========================== */
@@ -591,14 +755,60 @@ GitHub Status — @githubstatus
         grid-template-columns: 1fr;
       }
 
+      .grego-text {
+        grid-template-columns: 1fr;
+      }
+
       .film-info {
         flex-direction: column;
         align-items: flex-start;
       }
 
+      .film-card.featured {
+        padding-top: 50px;
+      }
+
       .revista-box h3 {
         font-size: 50px;
       }
+
+      .dedicatoria-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .dedicatoria-gallery img {
+        height: 450px;
+      }
+    }
+
+
+    @media (max-width: 500px) {
+
+      .hero h1 {
+        letter-spacing: -7px;
+      }
+
+      .section-title {
+        letter-spacing: -2px;
+      }
+
+      .grego-header h2 {
+        letter-spacing: -4px;
+      }
+
+      .film-card h3 {
+        letter-spacing: -2px;
+      }
+
+      .video-container {
+        aspect-ratio: 16 / 9;
+      }
+
+      .instagram-button {
+        width: 100%;
+        text-align: center;
+      }
+
     }
 
   </style>
@@ -606,11 +816,13 @@ GitHub Status — @githubstatus
 
 <body>
 
+
   <!-- =========================
        MENU
   ========================== -->
 
   <header>
+
     <nav>
 
       <a href="#" class="logo">
@@ -622,11 +834,12 @@ GitHub Status — @githubstatus
         <li><a href="#marca">A MARCA</a></li>
         <li><a href="#fundadora">FUNDADORA</a></li>
         <li><a href="#ss2026">SS2026</a></li>
-        <li><a href="#film">FASHION FILM</a></li>
+        <li><a href="#fashion-films">FASHION FILM</a></li>
         <li><a href="#contato">CONTATO</a></li>
       </ul>
 
     </nav>
+
   </header>
 
 
@@ -694,14 +907,17 @@ GitHub Status — @githubstatus
       <div class="fundadora-box">
 
         <div>
+
           <div class="small-title">
             Designer & Founder
           </div>
 
           <h3>ALS</h3>
+
         </div>
 
       </div>
+
 
       <div class="fundadora-text">
 
@@ -767,20 +983,29 @@ GitHub Status — @githubstatus
     <p class="section-subtitle">
       Uma temporada construída entre urbanismo,
       memória, cultura, mitologia e experimentação.
+      A SS2026 apresenta diferentes capítulos da
+      linguagem da A.L.S., culminando no lançamento
+      Grego Culture em setembro de 2026.
     </p>
 
 
     <div class="colecao-grid">
 
+
       <div class="colecao-card">
 
-        <div class="numero">01 — FILM</div>
+        <div class="numero">
+          01 — FASHION FILM
+        </div>
 
-        <h3>Fashion Film</h3>
+        <h3>
+          Urbanismo
+        </h3>
 
         <p>
-          Urbanismo, transporte e memória
-          transformados em linguagem de moda.
+          Transporte, cotidiano e memória transformados
+          em linguagem de moda no primeiro Fashion Film
+          da temporada.
         </p>
 
       </div>
@@ -788,12 +1013,17 @@ GitHub Status — @githubstatus
 
       <div class="colecao-card">
 
-        <div class="numero">02 — RUNWAY</div>
+        <div class="numero">
+          02 — GREEK CULTURE
+        </div>
 
-        <h3>Grécia</h3>
+        <h3>
+          Grécia
+        </h3>
 
         <p>
-          Uma coleção inspirada na cultura
+          O grande lançamento de setembro de 2026:
+          uma coleção inspirada na cultura, na estética
           e na mitologia grega.
         </p>
 
@@ -802,13 +1032,17 @@ GitHub Status — @githubstatus
 
       <div class="colecao-card">
 
-        <div class="numero">03 — MAGAZINE</div>
+        <div class="numero">
+          03 — MAGAZINE
+        </div>
 
-        <h3>Revista A.L.S.</h3>
+        <h3>
+          Revista A.L.S.
+        </h3>
 
         <p>
-          Um editorial de campo que ainda
-          será apresentado.
+          Um editorial de campo dedicado ao universo
+          Grego Culture SS2026.
         </p>
 
       </div>
@@ -819,76 +1053,258 @@ GitHub Status — @githubstatus
 
 
   <!-- =========================
-       FASHION FILM I
+       FASHION FILMS
   ========================== -->
 
-  <section class="fashion-film" id="film">
+  <section class="fashion-films" id="fashion-films">
+
 
     <div class="small-title">
-      A.L.S. Fashion Film 2026
+      A.L.S. — Fashion Films
     </div>
 
     <h2 class="section-title">
-      O caminho<br>
-      também veste.
+      Dois filmes.<br>
+      Uma temporada.
     </h2>
 
-    <p class="section-subtitle">
 
-      Um editorial pensado no contexto de
-      urbanismo e moda, realizado no Terminal
-      do Maracanã, em Colombo.
+    <div class="films-intro">
 
-      <br><br>
-
-      O local possui um significado pessoal:
-      foi parte da rotina de Alice e de sua mãe
-      durante grande parte de suas vidas,
-      utilizando o transporte público para
-      deslocamentos ao trabalho, consultas
-      e outros compromissos.
-
-    </p>
-    <div class="video-container">
-
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/zTQBBiYj-qo?si=nAYyZ2PHkd3SJxv3"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-        style="width:100%; height:100%; border:0;">
-      </iframe>
+      <p>
+        A SS2026 é apresentada através de dois Fashion Films
+        que registram diferentes momentos da construção
+        estética e conceitual da A.L.S.
+      </p>
 
     </div>
 
 
-    <div class="film-info">
+    <!-- =========================
+         FASHION FILM I
+    ========================== -->
 
-      <div>
+    <div class="film-card">
 
-        <h3>
-          A.L.S. Fashion Film SS2026 I
-        </h3>
+      <div class="film-label">
+        Fashion Film I — SS2026
+      </div>
+
+      <h3>
+        O caminho<br>
+        também veste.
+      </h3>
+
+      <p class="film-card-description">
+
+        Um editorial pensado no contexto de urbanismo e moda,
+        realizado no Terminal do Maracanã, em Colombo.
+
+        O local possui um significado pessoal:
+        foi parte da rotina de Alice e de sua mãe durante
+        grande parte de suas vidas, utilizando o transporte
+        público para deslocamentos ao trabalho, consultas
+        e outros compromissos.
+
+      </p>
+
+
+      <div class="video-container">
+
+        <iframe
+          src="https://www.youtube.com/embed/zTQBBiYj-qo?si=nAYyZ2PHkd3SJxv3"
+          title="A.L.S. Fashion Film SS2026 I"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+
+      <div class="film-info">
+
+        <div>
+
+          <h4>
+            A.L.S. Fashion Film SS2026 I
+          </h4>
+
+          <p>
+            Urbanismo × Moda × Memória
+          </p>
+
+        </div>
+
+
+        <a
+          class="instagram-button"
+          href="https://www.instagram.com/a.l.s._we.believe.in.you/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          @A.L.S.WeBelieveinYou
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         FASHION FILM II
+    ========================== -->
+
+    <div class="film-card featured">
+
+      <div class="film-label">
+        Fashion Film II — Grego Culture SS2026
+      </div>
+
+      <h3>
+        Grego Culture.
+      </h3>
+
+
+      <p class="film-card-description">
+
+        O segundo Fashion Film marca um novo capítulo
+        da A.L.S. e apresenta o lançamento da nova
+        coleção Grego Culture SS2026.
+
+      </p>
+
+
+      <div class="film-highlight">
+
+        Setembro de 2026.
+        A A.L.S. mergulha na cultura grega e em sua
+        mitologia para construir uma coleção que transforma
+        referências históricas e imaginárias em uma nova
+        linguagem contemporânea de moda.
+
+      </div>
+
+
+      <div class="video-container">
+
+        <iframe
+          src="https://www.youtube.com/embed/zaQm369bLOs?si=saYRrkpPE2jFQaq2"
+          title="A.L.S. Fashion Film II — Grego Culture SS2026"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+
+      <div class="film-info">
+
+        <div>
+
+          <h4>
+            A.L.S. Fashion Film II
+          </h4>
+
+          <p>
+            Grego Culture SS2026 × Grécia × Mitologia × Moda
+          </p>
+
+        </div>
+
+
+        <a
+          class="instagram-button"
+          href="https://www.instagram.com/a.l.s._we.believe.in.you/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Acompanhar lançamento
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- =========================
+       GREGO CULTURE SS2026
+  ========================== -->
+
+  <section class="grego-culture">
+
+    <div class="grego-content">
+
+
+      <div class="grego-header">
+
+        <div class="small-title">
+          Lançamento — Setembro 2026
+        </div>
+
+        <h2>
+          Grego<br>
+          Culture.
+        </h2>
 
         <p>
-          Urbanismo × Moda × Memória
+          Uma coleção inspirada na cultura grega
+          e na sua mitologia, transformando referências
+          do passado em uma proposta contemporânea
+          de moda.
         </p>
 
       </div>
 
 
-      <a
-        class="instagram-button"
-        href="https://www.instagram.com/a.l.s._we.believe.in.you/"
-        target="_blank">
+      <div class="grego-text">
 
-        @A.L.S.WeBelieveinYou
+        <div>
 
-      </a>
+          <p>
+            A escolha da Grécia nasce de uma relação
+            profunda com a mitologia grega, que sempre
+            marcou o imaginário da designer.
+
+            Deuses, histórias, esculturas, formas,
+            tecidos e símbolos tornam-se referências
+            para construir uma nova narrativa visual
+            dentro da A.L.S.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <p>
+            Vestidos e conjuntos produzidos 100% à mão,
+            explorando tecidos fluidos, estampas marcantes
+            e detalhes desenvolvidos especialmente para
+            cada peça.
+
+            A coleção busca unir o imaginário da Grécia
+            antiga à identidade contemporânea da marca.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="destaque">
+
+        Grego Culture SS2026 não é apenas uma coleção.
+        É uma interpretação da cultura grega através
+        do olhar da A.L.S.
+
+      </div>
 
     </div>
 
@@ -918,106 +1334,35 @@ GitHub Status — @githubstatus
       </div>
 
       <p>
-        Entre ideias em sala de aula do ensino médio surgiu uma amizade...
-        entre a modelo e designer Alice e o jovem Ryan. Ambos sabiam seus
-        talentos e, com muitas ideias e um colega que sabia bons ângulos
-        de câmera, nasce o primeiro editorial e fashion film capturados por ele.
+        Entre ideias em sala de aula do ensino médio surgiu
+        uma amizade entre a modelo e designer Alice e o jovem
+        Ryan. Ambos sabiam seus talentos e, com muitas ideias
+        e um colega que sabia bons ângulos de câmera, nasce
+        o primeiro editorial e fashion film capturados por ele.
       </p>
 
       <p>
-        Nascido e criado em Colombo, no Paraná, Ryan sempre teve um dom:
-        ser artista. Em seus artesanatos, suas colagens e seus desenhos
-        divertidos, não poderia deixar de ter participação nos trabalhos
-        da marca A.L.S.
+        Nascido e criado em Colombo, no Paraná, Ryan sempre
+        teve um dom: ser artista. Em seus artesanatos,
+        suas colagens e seus desenhos divertidos, não poderia
+        deixar de ter participação nos trabalhos da marca A.L.S.
       </p>
 
       <div class="dedicatoria-citacao">
-        “É com enorme prazer que eu agradeço com muita alegria ao meu
-        amigucho. Obrigada!”<br>
-        <span>— Alice, em reverência a seu amigo e parceiro de trabalho.</span>
+
+        “É com enorme prazer que eu agradeço com muita
+        alegria ao meu amigucho. Obrigada!”
+
+        <br>
+
+        <span>
+          — Alice, em reverência a seu amigo e parceiro de trabalho.
+        </span>
+
       </div>
 
     </div>
 
-  </section>
-
-
-  <!-- =========================
-       Grego Culture SS2026
-  ========================== -->
-
-  <section class="desfile">
-
-    <div class="desfile-content">
-
-      <div class="small-title">
-        SS2026 — Runway
-      </div>
-
-      <h2 class="section-title">
-        Moda da Grécia<br>
-        em ação.
-      </h2>
-
-      <p>
-        Podem esperar uma coleção extremamente
-        conectada à cultura grega.
-      </p>
-
-      <p>
-        Vestidos e conjuntos produzidos
-        100% à mão, explorando tecidos fluidos,
-        estampas marcantes e detalhes desenvolvidos
-        especialmente para cada peça.
-      </p>
-
-      <div class="destaque">
-
-        A escolha da Grécia nasce de uma relação
-        profunda com a mitologia grega, que sempre
-        marcou o imaginário da designer.
-
-      </div>
-    </p>
-    </p> 
-      FASHION FILM II GREGO CULTURE SS2026
-    </p> 
-  </div>
-      
-      <div class="video-container">
-
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/zaQm369bLOs?si=saYRrkpPE2jFQaq2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-        style="width:100%; height:100%; border:0;">
-      </iframe>
-
-    </div>
-
-
-    <div class="film-info">
-
-      <p>
-        Antes da marca, existiam bonecas,
-        espelhos, lençóis e uma imaginação
-        que transformava qualquer tecido
-        em uma nova possibilidade.
-      </p>
-
-      <p>
-        A SS2026 transforma essa memória infantil
-        em uma linguagem contemporânea de moda.
-      </p>
-
-    </div>
-
-    
   </section>
 
 
@@ -1038,11 +1383,10 @@ GitHub Status — @githubstatus
 
     <p class="section-subtitle">
 
-      A A.L.S. teve sua primeira exposição em
-      desfile acompanhada de palestra, apresentando
-      a identidade da marca, sua visão de mercado
-      e diferentes reflexões sobre como a moda
-      pode se posicionar e agir no mercado.
+      A A.L.S. teve sua primeira exposição em desfile
+      acompanhada de palestra, apresentando a identidade
+      da marca, sua visão de mercado e diferentes reflexões
+      sobre como a moda pode se posicionar e agir no mercado.
 
     </p>
 
@@ -1085,9 +1429,12 @@ GitHub Status — @githubstatus
       Revista A.L.S.
     </h2>
 
-    <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">
+    <p
+      class="section-subtitle"
+      style="margin-left:auto;margin-right:auto;">
 
-      Um editorial de campo: Grego Culture SS2026
+      Um editorial de campo dedicado ao universo
+      Grego Culture SS2026.
 
     </p>
 
@@ -1099,14 +1446,14 @@ GitHub Status — @githubstatus
       </div>
 
       <h3>
-        <br>
-        EDITORIAL
-        & Fashion Film
-        Grego Culture
+        EDITORIAL<br>
+        & FASHION FILM<br>
+        GREGO CULTURE
       </h3>
 
       <p>
-        ja em detque na midias.
+        Grego Culture SS2026 — em destaque nas mídias
+        e nos novos capítulos da A.L.S.
       </p>
 
     </div>
@@ -1134,14 +1481,16 @@ GitHub Status — @githubstatus
       A identidade visual da A.L.S. trabalha
       com a tranquilidade do azul, a força do preto,
       a pureza do branco e referências visuais
-      ligadas à água, a luz.
-      Feita de pessoa reais, diversidade e corpos, generos,
-      idades, rotos, peles, religioẽs, a marca é feita de 
-      pessoa reais, levendo o luxo e glamour a toda a pessoas.
+      ligadas à água e à luz.
+
+      Feita de pessoas reais, diversidade,
+      corpos, gêneros, idades, rostos, peles
+      e diferentes histórias.
+
+      A marca busca levar luxo e glamour
+      a todas as pessoas.
 
     </p>
-
-    
 
   </section>
 
@@ -1173,16 +1522,21 @@ GitHub Status — @githubstatus
 
       <a
         href="https://www.instagram.com/a.l.s._we.believe.in.you/"
-        target="_blank">
+        target="_blank"
+        rel="noopener noreferrer">
 
         Instagram
+
       </a>
+
 
       <a
         href="https://wa.me/5541998621118"
-        target="_blank">
+        target="_blank"
+        rel="noopener noreferrer">
 
         WhatsApp — Dsg. Alice
+
       </a>
 
     </div>
